@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f3f3f3;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 100vh;
+    -webkit-transition: background-color .5s ease;
+    -o-transition: background-color .5s ease;
+    transition: background-color .5s ease;
+}
+
+.wrapper.dark {
+    background-color: #24292d;
+}
+
+.wrapper .card {
+    position: relative;
+    width: 300px;
+    height: 380px;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0 15px 25px rgba(0, 0, 0, .025);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .025);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-transition: background-color .5s;
+    -o-transition: background-color .5s;
+    transition: background-color .5s;
+}
+
+.wrapper.dark .card {
+    background-color: #323840;
+}
+
+.toggle {
+    position: relative;
+    --toggle-width: 30px;
+    width: var(--toggle-width);
+    height: var(--toggle-width);
+    line-height: var(--toggle-width);
+    background-color: #e9f5ff;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.dark .toggle {
+    background-color: #404852;
+}
+
+.toggle::before {
+    content: '\f186';
+    font-family: "FontAwesome";
+    color: #2fa1ff;
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.dark .toggle::before {
+    content: '\f185';
+    color: #fff;
+}
+
+.wrapper .card .imgBx {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.wrapper .card .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: 50% 15%;
+    object-position: 50% 15%;
+}
+
+.wrapper .card .card_body h3 {
+    color: #2fa1ff;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.wrapper .card .card_body h5 {
+    color: #777;
+    font-size: .75em;
+    font-weight: 400;
+    -webkit-transition: color .5s;
+    -o-transition: color .5s;
+    transition: color .5s;
+}
+
+.wrapper.dark .card .card_body h5 {
+    color: #ccc;
+}
+
+.wrapper .card .card_body .social ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.wrapper .card .card_body .social ul li {
+    list-style: none;
+}
+
+.toggle,
+.wrapper .card .card_body .social ul li a,
+.wrapper .card .card_body .social ul li a::before {
+    -webkit-transition: .5s ease;
+    -o-transition: .5s ease;
+    transition: .5s ease;
+}
+
+.wrapper .card .card_body .social ul li a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #e9f5ff;
+    color: #2fa1ff;
+    display: inline-block;
+    line-height: 50px;
+    margin: 0 5px;
+    font-size: 20px;
+    z-index: 5;
+}
+
+.wrapper.dark .card .card_body .social ul li a {
+    background-color: #404852;
+}
+
+.wrapper .card .card_body .social ul li a:hover {
+    color: #fff;
+}
+
+.wrapper .card .card_body .social ul li a::before {
+    content: '';
+    /* width: 100%;
+    height: 100%; */
+    background-color: #2fa1ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+    z-index: -1;
+}
+
+.wrapper .card .card_body .social ul li a:hover::before {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}

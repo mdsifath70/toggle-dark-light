@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Toggle dark &amp; white</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
+
+</head>
+
+<body>
+
+    <!-- section START -->
+    <section class="wrapper">
+        <div class="card">
+            <div class="toggle"></div>
+            <!-- /.toggle -->
+            <div class="imgBx">
+                <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Profile" />
+            </div>
+            <div class="card_body">
+                <h3>Muhammad Irshad</h3>
+                <h5>Logo Designer</h5>
+                <div class="social">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.social -->
+            </div>
+            <!-- /.card_body -->
+        </div>
+        <!-- /.card -->
+    </section>
+    <!-- /.wrapper -->
+    <!-- section END -->
+
+
+    <script>
+        const wrapper = document.getElementsByClassName('wrapper')[0];
+        const toggle = document.getElementsByClassName('toggle')[0];
+        toggle.onclick = function() {
+            wrapper.classList.toggle('dark');
+        }
+    </script>
+</body>
+
+</html>
